@@ -1,11 +1,11 @@
 import React from 'react'
-import Carousel from "../components/Carousel";
+import Banner from "../components/Banner";
 import Menu from '../components/Menu';
 
 function Home() {
     return (
         <>
-            <Carousel />
+            <Banner />
             <Menu />
         </>
     )
