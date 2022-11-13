@@ -10,7 +10,10 @@ const productSchema = new mongoose.Schema(
         image : {type : String, required : true},
         price : {type : Number, required : true},
         size : {type : Array},
-        toppings : {type : Array},
+        toppings : {type: {
+            title : {type: String, required: true},
+            price : {type: Number, required: true}
+        }},
         inStock : {type: Boolean, default : true}
     },
     {
