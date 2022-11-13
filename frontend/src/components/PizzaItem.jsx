@@ -7,7 +7,7 @@ const PizzaItem = (props) => {
         <img src={props.pizza.pizzaImg} alt="Pizza" />
         <h3>{props.pizza.pizzaTitle}</h3>
         <p>{props.pizza.pizzaDesc}</p>
-        <h3>{props.pizza.pizzaPrice}</h3>
+        <h3>₹{props.pizza.pizzaPrice}</h3>
         <button>Add to cart</button>
     </div>
   )
