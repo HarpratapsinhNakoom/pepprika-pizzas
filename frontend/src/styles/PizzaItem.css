@@ -1,0 +1,44 @@
+.pizzaItem-container {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    align-items: center;
+    max-width: 350px;
+    padding: 15px;
+}
+
+.pizzaItem-container > img {
+    width: 300px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+
+.pizzaItem-container >img:hover {
+    transform: scale(0.95);
+}
+
+.pizzaItem-container > h3 {
+    font-size: 35px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.pizzaItem-container > p {
+    color: #454545;
+    text-align: center;
+}
+
+.pizzaItem-container > button {
+    width: 80%;
+    padding: 8px;
+    font-size: 20px;
+    color: whitesmoke;
+    background-color: black;
+    transition: all 0.4s ease;
+}
+
+.pizzaItem-container > button:hover{
+    transform: scale(1.05);
+}
