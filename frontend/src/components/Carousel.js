@@ -26,84 +26,29 @@ let data = [
     }
 ]
 function Car() {
+    const showCar = data.map((item, index) => {
+        return (
+            <Carousel.Item>
+                    <Row className="align-items-center">
+                        <Col md="auto">
+                            <img
+                                className="d-block rounded "
+                                src={item.src}
+                                alt={`Silde no. ${index + 1}`}
+                            />
+                        </Col>
+                        <Col>
+                            <h1 className=''>{item.caption}</h1>
+                        </Col>
+                    </Row>
+
+                </Carousel.Item>
+        );
+    })
     return (
         <div className="background">
             <Carousel variant="dark" bg="dark">
-                <Carousel.Item>
-                    <Row className="align-items-center">
-                        <Col md="auto">
-                            <img
-                                className="d-block rounded "
-                                src={data[0].src}
-                                alt="First slide"
-                            />
-                        </Col>
-                        <Col>
-                            <h1 className=''>{data[0].caption}</h1>
-                        </Col>
-                    </Row>
-
-                </Carousel.Item>
-                <Carousel.Item>
-                    <Row className="align-items-center">
-                        <Col md="auto">
-                            <img
-                                className="d-block rounded "
-                                src={data[1].src}
-                                alt="First slide"
-                            />
-                        </Col>
-                        <Col>
-                            <h1 className=''>{data[1].caption}</h1>
-                        </Col>
-                    </Row>
-
-                </Carousel.Item>
-                <Carousel.Item>
-                    <Row className="align-items-center">
-                        <Col md="auto">
-                            <img
-                                className="d-block rounded "
-                                src={data[2].src}
-                                alt="First slide"
-                            />
-                        </Col>
-                        <Col>
-                            <h1 className=''>{data[2].caption}</h1>
-                        </Col>
-                    </Row>
-
-                </Carousel.Item>
-                <Carousel.Item>
-                    <Row className="align-items-center">
-                        <Col md="auto">
-                            <img
-                                className="d-block rounded "
-                                src={data[3].src}
-                                alt="First slide"
-                            />
-                        </Col>
-                        <Col>
-                            <h1 className=''>{data[3].caption}</h1>
-                        </Col>
-                    </Row>
-
-                </Carousel.Item>
-                <Carousel.Item>
-                    <Row className="align-items-center">
-                        <Col md="auto">
-                            <img
-                                className="d-block rounded "
-                                src={data[4].src}
-                                alt="First slide"
-                            />
-                        </Col>
-                        <Col>
-                            <h1 className=''>{data[4].caption}</h1>
-                        </Col>
-                    </Row>
-
-                </Carousel.Item>
+                {showCar}
             </Carousel>
         </div>
     );
