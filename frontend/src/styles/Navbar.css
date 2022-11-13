@@ -1,0 +1,10 @@
+.navbar{
+    justify-content: space-between;
+    color: rgb(18, 165, 250);
+}
+#brand{
+    color:blanchedalmond;
+}
+#links{
+    justify-content: space-between;
+}
