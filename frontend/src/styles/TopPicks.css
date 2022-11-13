@@ -1,8 +1,8 @@
-.topPicks-container {
+.pizza-container {
     margin: 45px 10px;
 }
 
-.topPicks-wrapper{ 
+.pizza-wrapper{ 
     display: flex;
     gap: 50px;
     align-items: center;

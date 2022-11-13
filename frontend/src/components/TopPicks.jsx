@@ -10,8 +10,8 @@ const TopPicks = () => {
     );
   });
   return (
-    <div className='topPicks-container'>
-        <div className="topPicks-wrapper">
+    <div className='pizza-container'>
+        <div className="pizza-wrapper">
             {showtopPicks}
         </div>
     </div>
