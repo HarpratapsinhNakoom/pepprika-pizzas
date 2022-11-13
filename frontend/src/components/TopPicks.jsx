@@ -6,7 +6,7 @@ import { topPicks } from '../data/homeData';
 const TopPicks = () => {
   const showtopPicks = topPicks.map((item, index) => {
     return (
-        <PizzaItem pizza = {item}/>
+        <PizzaItem pizza = {item} key={index}/>
     );
   });
   return (
