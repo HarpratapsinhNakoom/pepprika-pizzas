@@ -1,0 +1,11 @@
+.topPicks-container {
+    margin: 45px 10px;
+}
+
+.topPicks-wrapper{ 
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
