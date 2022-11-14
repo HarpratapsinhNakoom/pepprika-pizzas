@@ -10,7 +10,6 @@ function Banner() {
                 </div>
             </div>
         </>
-
     );
 }
 
