@@ -14,7 +14,7 @@ function Menu() {
 
     return (
         <div className="menu-container">
-            <div className="menu-title">𝑀𝑒𝓃𝓊</div>
+            <div className="menu-title">𝐹𝒾𝓃𝒹 𝓈𝑜𝓂𝑒𝓉𝒽𝒾𝓃𝑔 𝓎𝑜𝓊 𝓁𝒾𝓀𝑒</div>
             <div className='pizza-container'>
                 <div className="pizza-wrapper">
                     {showtopPicks}

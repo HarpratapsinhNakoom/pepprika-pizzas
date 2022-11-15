@@ -102,3 +102,43 @@ export const menuData = [
     },
 
 ];
+
+export const filterData = [
+    {
+        image : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi0vfWa3LK6e7b1sGxBObbiAokmfia3HeeQQ&usqp=CAU",
+        title : "Maritime"
+    },
+    {
+        image:"https://freeiconshop.com/wp-content/uploads/edd/meat-outline-filled.png",
+        title : "Meat"
+    },
+    {
+        image :"https://cdn-icons-png.flaticon.com/512/271/271439.png",
+        title:"Vegetarian"
+    },
+    {
+        image :"https://cdn-icons-png.flaticon.com/512/883/883514.png",
+        title:"Green"
+    },
+    {
+        image :"https://img.freepik.com/premium-vector/red-chilli-pepper-spicy-food-icon_566734-258.jpg",
+        title:"Acute"
+    },
+    {
+        image: "https://cdn-icons-png.flaticon.com/512/765/765544.png",
+        title : "Easy"
+    },
+    {
+        image :"https://cdn-icons-png.flaticon.com/128/3508/3508234.png",
+        title:"Children"
+    },
+    {
+        image :"https://cdn-icons-png.flaticon.com/512/199/199552.png",
+        title:"New"
+    },
+    {
+        image :"https://cdn-icons-png.flaticon.com/512/1806/1806481.png",
+        title:"Divine"
+    },
+
+]

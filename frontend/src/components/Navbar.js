@@ -8,12 +8,11 @@ function NavbarComponent() {
     return (
         <div className='navbar-container'>
             <div className="navbar-left">
-                <div className="navbar-title">𝒫𝑒𝓅𝓅𝓇𝒾𝓀𝒶 𝒫𝒾𝓏𝓏𝒶𝓈</div>
+                <Link to="/" className="navbar-title">𝒫𝑒𝓅𝓅𝓇𝒾𝓀𝒶 𝒫𝒾𝓏𝓏𝒶𝓈</Link>
             </div>
             <div className="navbar-center">
                 <div className="navbar-center-side">
                     <Link to="/menu">Our Menu</Link>
-                    <Link to="#about">About</Link>
                 </div>
                 <div className="navbar-center-side">
                     <Link to="/login">Log in</Link>
