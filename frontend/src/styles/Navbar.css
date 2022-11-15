@@ -1,3 +1,6 @@
+.navbar-bg {
+    background-color: #454545;
+}
 .navbar-container {
     display: flex;
     align-items: center;
@@ -7,7 +10,7 @@
     /* position: relative; */
     z-index: 100;
     width: 100vw;
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(50px);
     /* background/: #454545; */
 }
 
