@@ -2,6 +2,7 @@ import React from 'react'
 import '../styles/Navbar.css'
 import { BsCart , BsInstagram , BsGithub } from 'react-icons/bs'
 import { CiLinkedin } from 'react-icons/ci'
+import { Link } from 'react-router-dom';
 
 function NavbarComponent() {
     return (
@@ -11,19 +12,19 @@ function NavbarComponent() {
             </div>
             <div className="navbar-center">
                 <div className="navbar-center-side">
-                    <p>Our Menu</p>
-                    <p>About</p>
+                    <Link to="/menu">Our Menu</Link>
+                    <Link to="#about">About</Link>
                 </div>
                 <div className="navbar-center-side">
-                    <p>Login</p>
-                    <p>Signup</p>
-                    <p><BsCart /></p>
+                    <Link to="/login">Log in</Link>
+                    <Link to="/signup">Sign up</Link>
+                    <Link to="/"><BsCart /></Link>
                 </div>
             </div>
             <div className="navbar-right">
-                <BsGithub />
-                <CiLinkedin />
-                <BsInstagram />
+                <Link to="/"><BsGithub /></Link>
+                <Link to="/"><CiLinkedin /></Link>
+                <Link to="/"><BsInstagram /></Link>
             </div>
         </div>
     );
