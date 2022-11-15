@@ -3,7 +3,7 @@ import '../styles/About.css'
 
 function About() {
     return (
-        <div className='about-container'>
+        <div className='about-container' id='about'>
             <div className="imagePart">
                 <img src="https://images.unsplash.com/photo-1593504049359-74330189a345?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGl6emF8ZW58MHx8MHx8&  auto=format&fit=crop&w=500&q=60" alt="about - 1" className="about-image1 about-img" />
                 <img src="https://media.istockphoto.com/id/1347464546/photo/bride-and-groom-on-a-wedding-day.jpg?b=1&s=170667a&w=0&k=20&c=3qlda4CtFWZSHISgC5XDW-zRJ_uSGEk7iO7046Qni0M=" alt="about - 2" className="about-image2 about-img" />
