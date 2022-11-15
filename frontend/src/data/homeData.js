@@ -20,6 +20,30 @@ export const topPicks = [
         // pizzaSize : "",
         pizzaPrice: "250"
     },
+];
+
+export const menuData = [
+    {
+        pizzaImg : "https://buddhapizza.com/storage/products/jgaXh2A4jVwLTXkTKBDIgFHZkgm06YF3g3Sva78a.jpeg",
+        pizzaTitle : "With salmon and spinach",
+        pizzaDesc : "Italian flour, whole tomato sauce, mozzarella, salmon, tomatoes, spinach, Dorblu, garlic, lemon, pine nuts, olives, oregano.",
+        // pizzaSize : "",
+        pizzaPrice: "350"
+    },
+    {
+        pizzaImg : "https://buddhapizza.com/storage/products/CkKZCZgXIQNuEooQcL0hynpSn6zrX68HGq7TQLD0.jpeg",
+        pizzaTitle : "Preminum Cheese",
+        pizzaDesc : "Italian flour, cream and parmesan sauce, mozzarella, DorBlue, parmesan, walnut, cranberry",
+        // pizzaSize : "",
+        pizzaPrice: "235"
+    },
+    {
+        pizzaImg : "https://buddhapizza.com/storage/products/kJQkPbUDxEA8uKasK3WLgB4goag8bC6a8ZSjIHnv.jpeg",
+        pizzaTitle : "Multi meat",
+        pizzaDesc : "Italian flour, whole tomato sauce, mozzarella, beef, boiled pork, pepperoni, hunting sausages, bell pepper, Crimean onion, barbecue sauce, oregano",
+        // pizzaSize : "",
+        pizzaPrice: "250"
+    },
     {
         pizzaImg : "https://buddhapizza.com/storage/products/nDyr9frV13kYv8N1tWAv0hkK12QBORPIB0ySz6Nr.jpeg",
         pizzaTitle : "Marrakesh",
