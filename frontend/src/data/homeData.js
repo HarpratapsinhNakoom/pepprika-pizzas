@@ -161,3 +161,21 @@ export const orderData = [
         title : "Delivered",
     }
 ]
+
+export const cartData = [
+    {
+        pizzaImg : "https://buddhapizza.com/storage/products/xwjIjT1nZk07i5vgZTNf1e2Ntfu78lJ8kOnI8lnn.jpeg",
+        pizzaTitle : "Chicken with pineapples",
+        pizzaPrice: "295"
+    },
+    {
+        pizzaImg : "https://buddhapizza.com/storage/products/kzBGWLG7WJDQ1PxYRBmdFyVhETHJrcWnJgUTbO39.jpeg",
+        pizzaTitle : "Salami",
+        pizzaPrice: "165"
+    },
+    {
+        pizzaImg : "https://buddhapizza.com/storage/products/7zIj7LwaRGRTA0S9Rq8w5uAzJqiqAW9CgvSUFgEu.jpeg",
+        pizzaTitle : "With lamb",
+        pizzaPrice: "295"
+    },
+];
