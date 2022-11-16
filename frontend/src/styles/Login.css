@@ -8,6 +8,10 @@
     display: flex;
 }
 
+p{
+    padding: 0;
+    margin: 0;
+}
 .login-image-container {
     flex: 1;
 }
@@ -35,7 +39,39 @@
 .login-title {
     font-size: 50px;
     margin-top: 25px;
-    margin-bottom: 55px;
+    margin-bottom: 45px;
+}
+
+.customer-admin {
+    display: flex;
+    /* border: 1px solid wheat; */
+    width: 50%;
+    align-items: center;
+    justify-content: space-around;
+    margin: 15px 0 35px 0;
+}
+
+.login-icons {
+    font-size: 30px;
+}
+
+.icon-part{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /* border: 1px solid wheat; */
+    color: aliceblue;
+}
+
+.selected {
+    color: salmon;
+}
+
+.icon-part > p{
+    letter-spacing: 1px;
+    font-size: 18px;
 }
 
 #email,
@@ -63,14 +99,15 @@
 
 .input-elements > label {
     align-self: flex-start;
-    font-size: 25px;
+    font-size: 20px;
+    letter-spacing: 0.8px;
 }
 
 .btn {
     width: 50%;
     padding: 7px;
     font-size: 20px;
-    margin-top: 50px;
+    margin: 50px 0 25px 0;
     background-color: salmon;
     transition: all 0.3s ease;
     color: aliceblue;
@@ -78,4 +115,11 @@
 .btn:hover {
     background-color: rgb(251, 101, 84);
     transform: scale(1.03);
+}
+.login-box > p > a {
+    color: salmon;
+    margin: 0 8px;
+}
+.login-box > p > a:hover {
+    text-decoration: none;
 }
