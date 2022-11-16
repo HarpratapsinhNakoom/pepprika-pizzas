@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Cart from './pages/Cart';
 import Login from './pages/Login';
 import MenuPage from './pages/MenuPage';
+import OrderTracking from './pages/OrderTracking';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render
@@ -17,6 +18,7 @@ root.render
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<Login />}/>
           <Route path="/menu" element={<MenuPage />}/>
+          <Route path='/order-tracking' element={<OrderTracking />}/>
         </Routes>
       </BrowserRouter>
     </>

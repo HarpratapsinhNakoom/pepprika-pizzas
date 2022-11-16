@@ -142,3 +142,22 @@ export const filterData = [
     },
 
 ]
+
+export const orderData = [
+    {
+        image : "https://www.nicepng.com/png/detail/303-3038160_consumer-payment-comments-payment-icon-png.png",
+        title : "Payment",
+    },
+    {
+        image : "https://www.nicepng.com/png/detail/85-858309_cooking-food-in-a-hot-casserole-comments-cooking.png",
+        title : "Preparing",
+    },
+    {
+        image : "https://www.citypng.com/public/uploads/preview/scooter-moto-motorcycle-delivery-black-icon-hd-png-116363661134nhze2maa9.png",
+        title : "On the way",
+    },
+    {
+        image : "https://cdn.iconscout.com/icon/premium/png-256-thumb/delivered-1772823-1508853.png",
+        title : "Delivered",
+    }
+]
