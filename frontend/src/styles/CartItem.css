@@ -63,3 +63,12 @@
     font-weight: 500;
     font-size: 30px;
 }
+
+.remove-pizza{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.remove-pizza:hover {
+    opacity: 0.5;
+}
