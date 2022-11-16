@@ -17,7 +17,7 @@ function NavbarComponent() {
                 <div className="navbar-center-side">
                     <Link to="/login">Log in</Link>
                     <Link to="/signup">Sign up</Link>
-                    <Link to="/"><BsCart /></Link>
+                    <Link to="/cart"><BsCart /></Link>
                 </div>
             </div>
             <div className="navbar-right">

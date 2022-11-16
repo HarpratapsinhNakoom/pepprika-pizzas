@@ -8,7 +8,8 @@
     /* position: relative; */
     z-index: 100;
     width: 100vw;
-    background-color: #45454580;
+    background-color: black;
+    background-image: url('https://image.shutterstock.com/image-vector/cool-black-white-seamless-pizza-260nw-1838987824.jpg');
     backdrop-filter: blur(10px);
 }
 
@@ -20,7 +21,7 @@
     width: fit-content;
     font-size: 30px;
     text-decoration: none;
-    color: white;
+    color: salmon;
     text-align: center;
 }
 

@@ -1,0 +1,74 @@
+.cart-item {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px dotted salmon;
+}
+
+.cart-pizza {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 25px;
+}
+
+.pizza-img {
+    width: 250px;
+}
+
+.pizza-title {
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.pizza-size {
+    font-size: 22px;
+}
+
+.cost-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+.quantity-control{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity-inc,
+.quantity-dec {
+    font-size: 22px;
+    padding: 15px;
+    background-color: black;
+    color: aliceblue;
+    border: 0.5px solid aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.quantity{
+    margin-left: 25px;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.cost {
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.remove-pizza{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.remove-pizza:hover {
+    opacity: 0.5;
+}
