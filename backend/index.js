@@ -18,6 +18,8 @@ mongoose.connect(
     console.log(err);
 })
 
+const userRoute = require('./paths/auth')
+
 app.listen(PORT, () => {
     console.log("Server listening on PORT - ",PORT);
 })
