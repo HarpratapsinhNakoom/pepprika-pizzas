@@ -1,6 +1,7 @@
 import React from 'react'
 import Banner from "../components/Banner";
 import Menu from '../components/Menu';
+import MenuPart from '../components/MenuPart';
 import TopPicks from '../components/TopPicks';
 
 function Home() {
@@ -9,6 +10,7 @@ function Home() {
             <Banner />
             <Menu />
             <TopPicks />
+            <MenuPart/>
         </>
     )
 }
