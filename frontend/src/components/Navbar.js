@@ -12,19 +12,19 @@ function NavbarComponent() {
             </div>
             <div className="navbar-center">
                 <div className="navbar-center-side">
-                    <Link to="/menu">Our Menu</Link>
+                    <Link to="/menu">Menu</Link>
                 </div>
                 <div className="navbar-center-side">
                     <Link to="/login">Log in</Link>
                     <Link to="/signup">Sign up</Link>
-                    <Link to="/cart"><BsCart /></Link>
+                    <Link to="/cart" style={{fontSize : "32px"}}><BsCart /></Link>
                 </div>
             </div>
-            <div className="navbar-right">
+            {/* <div className="navbar-right">
                 <Link to="/"><BsGithub /></Link>
                 <Link to="/"><CiLinkedin /></Link>
                 <Link to="/"><BsInstagram /></Link>
-            </div>
+            </div> */}
         </div>
     );
 }
