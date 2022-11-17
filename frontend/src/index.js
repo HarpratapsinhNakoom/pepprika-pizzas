@@ -7,6 +7,7 @@ import Cart from './pages/Cart';
 import Login from './pages/Login';
 import MenuPage from './pages/MenuPage';
 import OrderTracking from './pages/OrderTracking';
+import SignUp from './pages/SignUp';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render
@@ -16,9 +17,10 @@ root.render
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/login" element={<Login />}/>
-          <Route path="/menu" element={<MenuPage />}/>
-          <Route path='/order-tracking' element={<OrderTracking />}/>
+          <Route path="/login" element={<Login />} />
+          <Route path="/menu" element={<MenuPage />} />
+          <Route path='/order-tracking' element={<OrderTracking />} />
+          <Route path='/signup' element={<SignUp />} />
         </Routes>
       </BrowserRouter>
     </>
