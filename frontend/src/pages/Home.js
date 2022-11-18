@@ -1,8 +1,10 @@
 import React from 'react'
 import About from '../components/About';
 import Banner from "../components/Banner";
+import Menu from '../components/Menu';
+import MenuPart from '../components/MenuPart';
 import Footer from '../components/Footer';
-import Header from '../components/Header';
+import Header from '../components/Header";
 import TopPicks from '../components/TopPicks';
 
 function Home() {
@@ -11,6 +13,7 @@ function Home() {
             <Header />
             <Banner />
             <TopPicks />
+            <MenuPart/>
             <About />
             <Footer />
         </>
