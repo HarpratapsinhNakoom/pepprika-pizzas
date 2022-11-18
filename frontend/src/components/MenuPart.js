@@ -1,37 +1,74 @@
+// import React from 'react'
+// import '../styles/MenuPart.css'
+// export default function MenuPart() {
+//   return (
+//     // <div className='container'>
+//     //     <h3 className='title'>PIZZA OF THE MONTH</h3>
+//     //     <h1 className='subtitle'>THE BIG BIRD</h1>
+//     //     <div id='item1'>
+//     //       <ul>
+//     //         <li>BREADED CHHICKEN</li>
+//     //         <li>BBQ RANCH SAUCE</li>
+//     //         <li>BACON</li>
+//     //         <li>MOZZARELLA</li>
+//     //       </ul>
+//     //     </div>
+//     //     <div id='item2'>
+//     //       <ul>
+//     //         <li>CARAMELIZED ONIONS</li>
+//     //         <li>CHEDDAR</li>
+//     //         <li>ROMANO</li>
+//     //       </ul>
+//     //     </div>
+//     //     <div className="btn">
+//     //       <button id='bt1'><strong>ORDER ONLINE NOW</strong></button>
+//     //       <button id='bt2'><strong>SEE OUR MENU</strong></button>
+//     //     </div>
+//     // </div>
+
+//   )
+// }
+
 import React from 'react'
 import '../styles/MenuPart.css'
-export default function MenuPart() {
-  return (
-    <>
-      <div className="box">
-        <div className='container'>
-        <h3>PIZZA OF THE MONTH</h3>
-        <h1>THE BIG BIRD</h1>
-          <div id='item1'>
-            <ul>
-              <li>BREADED CHHICKEN</li>
-              <li>BBQ RANCH SAUCE</li>
-              <li>BACON</li>
-              <li>MOZZARELLA</li>
-            </ul>
-          </div>
-          <div id='item2'>
-            <ul>
-              <li>CARAMELIZED ONIONS</li>
-              <li>CHEDDAR</li>
-              <li>ROMANO</li>
-            </ul>
-          </div>
-          <div className="btn">
-             <button id='bt1'><strong>ORDER ONLINE NOW</strong></button>
-              <button id='bt2'><strong>SEE OUR MENU</strong></button>
-          </div>
-        
-         
-        </div>
-      </div>
-    </>
 
+const MenuPart = () => {
+  return (
+    <div className='menupart-container'>
+        <div className="text-part">
+            <div className="best-pizza-title">
+                <span style={{color : "salmon"}}>PIZZA</span> OF THE MONTH
+            </div>
+            <div className="best-pizza-subtitle">
+                THE BIG <span style={{color : "salmon"}}>BIRD</span>
+            </div>
+            <div className="ingredients-list">
+                <div id='item1'>
+                  <ul>
+                    <li>BREADED CHHICKEN</li>
+                    <li>BBQ RANCH SAUCE</li>
+                    <li>BACON</li>
+                    <li>MOZZARELLA</li>
+                  </ul>
+                </div>
+                <div id='item2'>
+                  <ul>
+                    <li>CARAMELIZED ONIONS</li>
+                    <li>CHEDDAR</li>
+                    <li>ROMANO</li>
+                  </ul>
+                </div>
+            </div>
+            <div className="button-container">
+                <button id='btn'><strong>ORDER ONLINE NOW</strong></button>
+                <button id='btn'><strong>SEE OUR MENU</strong></button>
+            </div>
+        </div>
+        <div className="img-part">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80" alt="" />
+        </div>
+    </div>
   )
 }
 
+export default MenuPart
