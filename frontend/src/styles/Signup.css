@@ -1,0 +1,132 @@
+.login-container {
+    background-color: black;
+    width: 100vw;
+    height: 130vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+}
+
+p{
+    padding: 0;
+    margin: 0;
+}
+.login-image-containesr {
+    flex: 1;
+}
+.login-image {
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+}
+
+.login-box {
+    color: aliceblue;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.input-elements {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.login-title {
+    font-size: 50px;
+    margin-top: 25px;
+    margin-bottom: 45px;
+}
+
+.customer-admin {
+    display: flex;
+    /* border: 1px solid wheat; */
+    width: 50%;
+    align-items: center;
+    justify-content: space-around;
+    margin: 15px 0 35px 0;
+}
+
+.login-icons {
+    font-size: 30px;
+}
+
+.icon-part{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /* border: 1px solid wheat; */
+    color: aliceblue;
+}
+
+.selected {
+    color: salmon;
+}
+
+.icon-part > p{
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+#email,
+#password,
+#confirm_password,
+#first_name,
+#last_name {
+    width: 100%;
+    padding: 7px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid whitesmoke;
+    background-color: transparent;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease;
+    color: aliceblue;
+}
+
+#email:focus,
+#password:focus,
+#confirm_password:focus,
+#first_name:focus,
+#last_name:focus,
+#date_of_birth:focus {
+    outline: none;
+    border: none    ;
+    -webkit-box-shadow: 0px 0px 10px 2px salmon;
+    -moz-box-shadow: 0px 0px 10px 2px salmon;
+    box-shadow: 0px 0px 10px 2px salmon;
+}
+
+.input-elements > label {
+    align-self: flex-start;
+    font-size: 20px;
+    letter-spacing: 0.8px;
+}
+
+.btn {
+    width: 50%;
+    padding: 7px;
+    font-size: 20px;
+    margin: 50px 0 25px 0;
+    background-color: salmon;
+    transition: all 0.3s ease;
+    color: aliceblue;
+}
+.btn:hover {
+    background-color: rgb(251, 101, 84);
+    transform: scale(1.03);
+}
+.login-box > p > a {
+    color: salmon;
+    margin: 0 8px;
+}
+.login-box > p > a:hover {
+    text-decoration: none;
+}

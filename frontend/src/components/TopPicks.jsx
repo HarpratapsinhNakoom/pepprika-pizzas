@@ -1,6 +1,7 @@
 import React from 'react'
 import PizzaItem from './PizzaItem';
 import '../styles/TopPicks.css'
+import '../styles/Menu.css'
 import { topPicks } from '../data/homeData';
 
 const TopPicks = () => {
@@ -10,8 +11,9 @@ const TopPicks = () => {
     );
   });
   return (
-    <div className='topPicks-container'>
-        <div className="topPicks-wrapper">
+    <div className='pizza-container'>
+        <div className="menu-title">𝐵𝑒𝓈𝓉 𝓈𝑒𝓁𝓁𝑒𝓇𝓈</div>
+        <div className="pizza-wrapper">
             {showtopPicks}
         </div>
     </div>
