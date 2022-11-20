@@ -2,7 +2,7 @@ const router = require('express').Router();
 const User = require('../models/User');
 
 const jwt = require("jsonwebtoken");
-const cryptojs = require("crypto-js");
+const CryptoJS = require("crypto-js");
 
 router.post('/signup', async(req, res) => {
     const newUser = new User({
@@ -32,7 +32,6 @@ router.post("/login", async(req, res) => {
 
         !user && res.status(401).json("Wrong credentials no such email");
 
-        // console.log(user);
         const ogPassword = CryptoJS.AES.decrypt(
                                             user.password,
                                             process.env.PASSWORD_SECRET)
