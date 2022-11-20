@@ -9,8 +9,7 @@ const cartSchema = new mongoose.Schema(
         productList : [
            {
                 productID : {type : String},
-                quantity : {type : Number, default : 1},
-                price : {type : Number}
+                quantity : {type : Number, default : 1}
            }
         ],
     },
