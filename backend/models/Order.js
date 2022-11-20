@@ -9,7 +9,6 @@ const orderSchema = new mongoose.Schema(
         productList : [
            {
                 productID : {type : String},
-                price : {type:Number},
                 quantity : {type : Number, default : 1},
            }
         ],
