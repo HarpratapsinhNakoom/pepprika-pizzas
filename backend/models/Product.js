@@ -11,12 +11,6 @@ const productSchema = new mongoose.Schema(
         price : {type : Number, required : true},
         size : {type : Array},
         category : {type : Array},
-        toppings : [
-            {
-            title : {type: String, required: true},
-            price : {type: Number, required: true}
-        }
-        ],
         inStock : {type: Boolean, default : true}
     },
     {
