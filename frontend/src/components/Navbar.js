@@ -1,10 +1,22 @@
 import React from 'react'
 import '../styles/Navbar.css'
-import { BsCart , BsInstagram , BsGithub } from 'react-icons/bs'
+import { BsCart, BsInstagram, BsGithub } from 'react-icons/bs'
 import { CiLinkedin } from 'react-icons/ci'
 import { Link } from 'react-router-dom';
+import { UserAuth } from '../context/AuthContext'
+
 
 function NavbarComponent() {
+    const { user, logOut } = UserAuth();
+
+    const handleSignOut = async () => {
+        try {
+            await logOut()
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
     return (
         <div className='navbar-container'>
             <div className="navbar-left">
@@ -15,9 +27,20 @@ function NavbarComponent() {
                     <Link to="/menu">Menu</Link>
                 </div>
                 <div className="navbar-center-side">
-                    <Link to="/login">Log in</Link>
-                    <Link to="/signup">Sign up</Link>
-                    <Link to="/cart" style={{fontSize : "32px"}}><BsCart /></Link>
+                    {user?.displayName ? (
+                        <>
+
+                            <button onClick={handleSignOut}>LogOut</button>
+                            <h1>Welcome {user?.displayName}</h1>
+                            <Link to="/cart" style={{ fontSize: "32px" }}><BsCart /></Link>
+                        </>
+                    ) : (
+                        <>
+                            <Link to='/login'>Sign In</Link>
+                            <Link to="/signup">Sign up</Link>
+                        </>
+                    )}
+                    {/* <Link to="/login">Log in</Link> */}
                 </div>
             </div>
             {/* <div className="navbar-right">

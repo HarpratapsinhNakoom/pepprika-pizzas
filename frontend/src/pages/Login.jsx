@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../styles/Login.css'
 import { Link } from 'react-router-dom'
 import { RiAdminFill } from 'react-icons/ri'
 import { AiOutlineShopping } from 'react-icons/ai'
+import { GoogleButton } from 'react-google-button'
+import { UserAuth } from '../context/AuthContext'
+import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
   const [userType, setUserType] = React.useState("customer");
@@ -16,6 +19,24 @@ const Login = () => {
 
 
   }
+  const { googleSignIn, user } = UserAuth();
+  const navigate = useNavigate();
+
+  const handleGoogleSignIn = async () => {
+    try {
+      await googleSignIn();
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  useEffect(() => {
+    if (user != null) {
+      navigate('/');
+    }
+  }, [user])
+
+
   return (
     <div className='login-container'>
       <div className='login-image-container'>
@@ -44,6 +65,8 @@ const Login = () => {
           <input type="password" name="password" id='password' />
         </div>
         <button className='submit-btn btn'>Log in</button>
+        <GoogleButton onClick={handleGoogleSignIn} />
+
         <p>Don't have an account? <Link to="/signup">Sign up</Link> </p>
       </div>
     </div>

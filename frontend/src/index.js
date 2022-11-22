@@ -8,20 +8,24 @@ import Login from './pages/Login';
 import MenuPage from './pages/MenuPage';
 import OrderTracking from './pages/OrderTracking';
 import SignUp from './pages/SignUp';
+import { AuthContextProvider } from './context/AuthContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render
   (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/menu" element={<MenuPage />} />
-          <Route path='/order-tracking' element={<OrderTracking />} />
-          <Route path='/signup' element={<SignUp />} />
-        </Routes>
-      </BrowserRouter>
+      <AuthContextProvider>
+
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/menu" element={<MenuPage />} />
+            <Route path='/order-tracking' element={<OrderTracking />} />
+            <Route path='/signup' element={<SignUp />} />
+          </Routes>
+        </BrowserRouter>
+      </AuthContextProvider>
     </>
   );
