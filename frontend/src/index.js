@@ -22,6 +22,7 @@ root.render
             <Route path="/cart" element={<Cart />} />
             <Route path="/login" element={<Login />} />
             <Route path="/menu" element={<MenuPage />} />
+            <Route path="/menu/:category" element={<MenuPage />} />
             <Route path='/order-tracking' element={<OrderTracking />} />
             <Route path='/signup' element={<SignUp />} />
           </Routes>
