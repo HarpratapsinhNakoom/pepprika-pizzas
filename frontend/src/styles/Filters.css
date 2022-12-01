@@ -7,6 +7,7 @@
 }
 .filter-box {
     cursor: pointer;
+    text-decoration: none;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,6 +24,7 @@
     width: 100%;
 }
 .filter-name {
+    color: #252525;
     font-size:15px;
     margin-top: 12px;
     font-weight: 500;
