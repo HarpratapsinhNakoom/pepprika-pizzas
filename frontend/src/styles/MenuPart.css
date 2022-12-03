@@ -1,7 +1,10 @@
 .menupart-container {
   display: flex;
   column-gap: 15px;
+  row-gap: 15px;
   margin: 10px;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
 }
 
 .text-part {
@@ -45,13 +48,14 @@
   border-radius: inherit;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .button-container {
   margin-top: 80px;
   display: flex;
   width: 100%;
+  align-items: center;
   justify-content: space-around;
 }
 
@@ -63,4 +67,54 @@
   outline: none;
   font-size: 22px;
   border: none;
+}
+
+@media screen and (max-width : 750px) { 
+    .menupart-container {
+      flex-direction: column;
+    }
+}
+
+@media screen and (max-width : 450px) {
+  .text-part {
+    padding: 50px 10px;
+  }
+  
+  .best-pizza-title {
+    font-size: 22px;
+  }
+  
+  .best-pizza-subtitle {
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 40px;
+  }
+  
+  .ingredients-list {
+    margin: 20px 5px;
+  }
+  
+  .ingredients-list >div > ul > li {
+    font-size: 17px;
+  }
+  .img-part{
+    flex: 9;
+    border-radius: 10px;
+  }
+   
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 25px;
+  }
+  
+  #btn{
+    width: 90%;
+    padding: 15px;
+    color: aliceblue;
+    background-color: rgba(250, 128, 114, 0.689);
+    outline: none;
+    font-size: 22px;
+    border: none;
+  }
 }

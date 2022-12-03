@@ -78,7 +78,7 @@
         flex: auto;
     }
     .navbar-container {
-        position: relative;
+        position: fixed;
         justify-content: center;
         align-items: center;
         z-index: 12;
