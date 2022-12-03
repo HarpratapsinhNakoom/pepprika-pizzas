@@ -9,6 +9,7 @@ import MenuPage from './pages/MenuPage';
 import OrderTracking from './pages/OrderTracking';
 import SignUp from './pages/SignUp';
 import { AuthContextProvider } from './context/AuthContext';
+import Admin from './pages/Admin';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render
@@ -25,6 +26,7 @@ root.render
             <Route path="/menu/:category" element={<MenuPage />} />
             <Route path='/order-tracking' element={<OrderTracking />} />
             <Route path='/signup' element={<SignUp />} />
+            <Route path='/admin' element={<Admin />} />
           </Routes>
         </BrowserRouter>
       </AuthContextProvider>
