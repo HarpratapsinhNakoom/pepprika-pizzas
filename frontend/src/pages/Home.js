@@ -15,7 +15,7 @@ function Home() {
             <MenuPart/>
             <TopPicks />
             <About />
-            <Footer />
+            {/* <Footer /> */}
         </>
     )
 }
