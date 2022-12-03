@@ -2,15 +2,16 @@ import React from 'react'
 import CartItem from '../components/CartItem'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
-import { cartData } from '../data/homeData'
 import {TfiHandPointRight} from 'react-icons/tfi'
 import '../styles/Cart.css'
+import {useSelector} from 'react-redux'
 
 function Cart() {
-    const [totalCost, setTotalCost] = React.useState(0);
-    const showCartItems = cartData.map((item, index) => {
+    const cart = useSelector(state => state.cart);
+    console.log(cart)
+    const showCartItems = cart.pizzaList.map((item, index) => {
         return(
-            <CartItem key={index} pizza={item} setTotalCost={setTotalCost}/>
+            <CartItem key={index} pizza={item}/>
         );
     })
     return (
@@ -22,7 +23,7 @@ function Cart() {
                     {showCartItems}
                 </div>
                 <div className="total-cost">
-                    Total Payable : ₹{totalCost}
+                    Total Payable : ₹{cart.totalPrice}
                 </div>
                 <div className="payment-options">
                     <h2>Payment options</h2>
