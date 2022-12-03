@@ -1,10 +1,10 @@
 import React from 'react'
 import '../styles/Navbar.css'
-import { BsCart, BsInstagram, BsGithub } from 'react-icons/bs'
-import { CiLinkedin } from 'react-icons/ci'
+import { BsCart } from 'react-icons/bs'
 import { Link } from 'react-router-dom';
 import { UserAuth } from '../context/AuthContext'
-
+import {addToCart} from '../redux/cartRedux'
+import {useSelector} from 'react-redux'
 
 function NavbarComponent() {
     const { user, logOut } = UserAuth();
@@ -16,6 +16,8 @@ function NavbarComponent() {
             console.log(error);
         }
     }
+
+    const quantity = useSelector(state => state.cart.quantity)
 
     return (
         <div className='navbar-container'>
@@ -32,7 +34,7 @@ function NavbarComponent() {
 
                             <button onClick={handleSignOut}>LogOut</button>
                             <h1>Welcome {user?.displayName}</h1>
-                            <Link to="/cart" style={{ fontSize: "32px" }}><BsCart /></Link>
+                            {/* <Link to="/cart" style={{ fontSize: "32px" }}><BsCart /></Link> */}
                         </>
                     ) : (
                         <>
@@ -40,14 +42,10 @@ function NavbarComponent() {
                             <Link to="/signup">Sign up</Link>
                         </>
                     )}
+                    <Link to="/cart" style={{ fontSize: "32px" }}><BsCart /> {quantity}</Link>
                     {/* <Link to="/login">Log in</Link> */}
                 </div>
             </div>
-            {/* <div className="navbar-right">
-                <Link to="/"><BsGithub /></Link>
-                <Link to="/"><CiLinkedin /></Link>
-                <Link to="/"><BsInstagram /></Link>
-            </div> */}
         </div>
     );
 }
