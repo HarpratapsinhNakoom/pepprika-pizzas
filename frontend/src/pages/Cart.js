@@ -20,7 +20,10 @@ function Cart() {
             <Header />
                 <div className="cart-title">𝒞𝒜𝑅𝒯</div>
                 <div className="cart-items-container">
-                    {showCartItems}
+                    {cart.pizzaList && showCartItems}
+                    {!cart.pizzaList && <>
+                        <h1>Add something to cart</h1>
+                    </>}
                 </div>
                 <div className="total-cost">
                     Total Payable : ₹{cart.totalPrice}

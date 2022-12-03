@@ -3,7 +3,6 @@ import '../styles/Navbar.css'
 import { BsCart } from 'react-icons/bs'
 import { Link } from 'react-router-dom';
 import { UserAuth } from '../context/AuthContext'
-import {addToCart} from '../redux/cartRedux'
 import {useSelector} from 'react-redux'
 
 function NavbarComponent() {
