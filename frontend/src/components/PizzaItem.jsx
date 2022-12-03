@@ -17,7 +17,7 @@ const PizzaItem = (props) => {
         <p>{props.pizza.desc}</p>
         <h3>₹{props.pizza.price}</h3>
         <button>
-            <p  onClick={handleCart}>Add to cart</p>
+            <p onClick={handleCart}>Add to cart</p>
             <div className="quantity">
                 <p>{quantity}</p>
                 <div className="quantity-controls">
