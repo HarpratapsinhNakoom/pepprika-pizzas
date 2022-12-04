@@ -9,6 +9,7 @@ app.use(cors());
 
 const authRoute = require('./paths/auth')
 const productRoute = require('./paths/products')
+const stripeRoute = require('./paths/stripe')
 
 
 const dotenv = require("dotenv")
@@ -26,6 +27,7 @@ mongoose.connect(
 
 app.use('/api/auth', authRoute);
 app.use('/api/products', productRoute);
+app.use('/api/checkout', stripeRoute);
 
 app.listen(PORT, () => {
     console.log("Server listening on PORT - ",PORT);

@@ -82,17 +82,25 @@
 .address:focus {
     outline: none;
 }
-.address-container > button {
-    width: 170px;
+.checkout_btn {
+    text-align: center;
+    width: 300px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    column-gap: 25px;
+    justify-content: center;
     background-color: black;
     color: aliceblue;
     padding: 12px;
     font-size: 22px;
 }
 
-.address-container > button:hover {
+.checkout_btn:hover {
     opacity: 0.8;
+}
+
+@media screen and (max-width : 850px) { 
+    #cart {
+        margin-top: 180px;
+    }
 }
