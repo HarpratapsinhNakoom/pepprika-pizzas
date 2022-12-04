@@ -2,11 +2,10 @@
     background-size: cover;
     background-image: url('https://img.freepik.com/premium-photo/tasty-pepperoni-pizza-black-concrete-background_79782-103.jpg?w=2000');
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding-top: 170px;
 }
 
 .banner-wrapper{ 
@@ -34,4 +33,18 @@
     z-index: 2;
     letter-spacing: 1px;
     word-spacing: 1.5px;
+}
+
+@media screen and (max-width : 750px) {
+    .banner-text{
+        width: 75%;
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width : 450px) {
+    .banner-text{
+        width: 90%;
+        font-size: 40px;
+    }
 }

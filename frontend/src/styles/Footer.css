@@ -1,21 +1,21 @@
-body{
+/* body{
     display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  min-height: 100vh;
-  flex-direction: column;
-  color: rgb(254, 254, 254) 
-  }
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    color: rgb(254, 254, 254) 
+  } */
   
   footer{
-    position: relative;
-    width: 100%;
+    /* position: relative; */
+    width: 100vw;
     height: auto;
     background-image: url("../images/bg.gif");
     background-position: center;
-    background-size: 100%;
+    background-size: cover;
     height: 400px;
-    margin-right: 1250px;  
+    /* margin-right: 1250px;   */
     color: rgb(254, 254, 254) 
   }
   
@@ -97,6 +97,10 @@ body{
   flex-wrap: wrap;
   }
   
+  .section-heading {
+    width: 100%;
+    padding: 0;
+  }
   footer .row .bar{
   margin-top: 80px;
   margin-left: 100px;
