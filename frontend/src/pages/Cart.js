@@ -10,7 +10,7 @@ import { userRequest } from '../requestMethods'
 import {useNavigate, useNavigation} from 'react-router'
 
 function Cart() {
-    const KEY = 'pk_test_51LvHTiSA3uyhCrsARjPhDaKzEOLx6c1xoByulv339Y91wK9gpDAmtrRUTEgxM7g0QzHSMnXOQbeb8R3yO8utNJor00LALCkNmH';
+    const KEY = process.env.REACT_APP_STRIPE;
     console.log(KEY)
     const cart = useSelector(state => state.cart);
 
