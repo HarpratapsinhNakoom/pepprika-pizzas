@@ -3,10 +3,16 @@
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    margin-top: 100px;
+    row-gap: 50px;
+    column-gap: 25px;
 }
+.user-details>div{
+    width: 300px;
 
+}
 .user-details > div > h3 {
-    font-size: 35px;
+    font-size: 40px;
     color: salmon;
     letter-spacing: 1px;
     text-align: center;
@@ -22,12 +28,28 @@
     margin: 100px 70px 50px 70px;
     /* margin-top: 70px; */
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
+    
 }
 
-.order-status > div {
+.order-status > h1 {
+    text-align: center;
+    font-size: 65px;
+}
+.status-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    column-gap: 25px;
+}
+.status-icon-container > div {
     min-height: 120px;
+    width: 250px;
     display: flex;
     row-gap: 15px;
     flex-direction: column;
@@ -35,10 +57,10 @@
     justify-content: space-between;
 }
 .order-icons {
-    width: 55px;
+    width: 85px;
 }
 
-.order-status > div > p {
+.status-icon-container > div > p {
     font-size: 22px;
     letter-spacing: 1px;
 }
@@ -58,4 +80,31 @@
 
 .waiting {
     opacity: 0.3;
+}
+@media screen and (max-width:1270px) and (min-width:950px) {
+    .user-details>div{
+        width: 450px;
+
+    }   
+    .user-details>div>h3{
+        font-size: 45px;
+    } 
+}
+@media screen and (max-width:1210px) and (min-width:945px) {
+    .status-icon-container>div{
+        width: 450px;
+
+    }   
+    .status-icon-container > div > p{
+        font-size: 35px;
+    } 
+    .order-icons{
+        width: 100px;
+    }
+}
+@media screen and (max-width:850px) {
+    .user-details{
+        margin-top: 150px;
+
+    }
 }

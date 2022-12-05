@@ -33,8 +33,7 @@ const OrderTracking = () => {
     })
   return (
     <div
-    className='order-tracking-container'
-    style={{marginTop : "150px"}}>
+    className='order-tracking-container'>
         <Header />
         <div className="user-details">
             <div>
@@ -55,9 +54,10 @@ const OrderTracking = () => {
             </div>
         </div>
         <div className="order-status">
-            {showStatus}
+            <h1>Current Status</h1>
+            <div className='status-icon-container'>{showStatus}</div>
         </div>
-        <Footer />
+        {/* <Footer /> */}
     </div>
   )
 }
