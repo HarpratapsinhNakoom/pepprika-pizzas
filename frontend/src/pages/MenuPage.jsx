@@ -29,11 +29,11 @@ const MenuPage = () => {
   }, [category])
   // console.log(category)
   return (
-    <div style={{marginTop : "120px"}}>
+    <div>
         <Header />
         <Filters />
         <Menu menuData = {menuData}/>
-        <Footer />
+        {/* <Footer /> */}
     </div>
   )
 }

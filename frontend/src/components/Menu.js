@@ -1,5 +1,5 @@
 import React from 'react'
-// import { menuData } from '../data/homeData';
+import { menuData } from '../data/homeData';
 import PizzaItem from './PizzaItem';
 import '../styles/TopPicks.css'
 import '../styles/Menu.css'
@@ -7,7 +7,7 @@ import '../styles/Menu.css'
 
 function Menu(props) {
 
-    const showMenu = props.menuData.map((item, index) => {
+    const showMenu = menuData.map((item, index) => {
         return (
             <PizzaItem pizza = {item} key={index}/>
         );
