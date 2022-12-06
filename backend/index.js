@@ -9,6 +9,8 @@ app.use(cors());
 
 const authRoute = require('./paths/auth')
 const productRoute = require('./paths/products')
+const cartRoute = require('./paths/cart')
+const orderRoute = require('./paths/order')
 const stripeRoute = require('./paths/stripe')
 
 
@@ -27,6 +29,8 @@ mongoose.connect(
 
 app.use('/api/auth', authRoute);
 app.use('/api/products', productRoute);
+app.use('/api/cart', cartRoute);
+app.use('/api/order', orderRoute);
 app.use('/api/checkout', stripeRoute);
 
 app.listen(PORT, () => {
