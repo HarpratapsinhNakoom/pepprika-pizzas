@@ -22,8 +22,9 @@ function NavbarComponent() {
     const handleToggle = () => {
         navRef.current.classList.toggle('navbar-responsive');
     }
-    const quantity = useSelector(state => state.cart.quantity)
-
+    const quantity = useSelector(state => state.cart.quantity);
+    const loggedUser = useSelector(state => state.user.currentUser);
+    const loggedIn = user || loggedUser;
     return (
         <div className='navbar-container'>
             <div className="navbar-left">
@@ -34,12 +35,12 @@ function NavbarComponent() {
                     <Link to="/menu">Menu</Link>
                 </div>
                 <div className="navbar-center-side navbar-center-side-right">
-                    {user?.displayName ? (
+                    {loggedIn ? (
                         <>
 
-                            <button onClick={handleSignOut}>LogOut</button>
-                            <h1>Welcome {user?.displayName}</h1>
-                            {/* <Link to="/cart" style={{ fontSize: "32px" }}><BsCart /></Link> */}
+                            <Link to="/order-tracking">Your Order</Link>
+                            <p onClick={handleSignOut}>LogOut</p>
+                            {/* <Link to="/cart" style={{ fontSize: "32px" }}><BsCart /> {quantity}</Link> */}
                         </>
                     ) : (
                         <>
