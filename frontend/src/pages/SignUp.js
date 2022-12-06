@@ -37,10 +37,10 @@ const SignUp = () => {
                     <input type="text" id="first_name" name='first_name' />
                     <label htmlFor="last_name">Last Name</label>
                     <input type="text" id="last_name" name='last_name' />
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    {/* <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                         <label htmlFor="dob">Date of Birth</label>
                         <input type="date" id="date_of_birth" name='dob' style={{ width: "fit-content" }} />
-                    </div>
+                    </div> */}
                     <label htmlFor="email">Email address</label>
                     <input type="email" id="email" name='email' />
                     <label htmlFor="password">Password</label>
@@ -52,7 +52,7 @@ const SignUp = () => {
                 <p>Already have an account? <Link to="/login">Login</Link> </p>
             </div>
             <div className='login-image-container'>
-                <img src="https://www.bing.com/th?id=OIP.AsQJdDcAHXBnO6UuR7KUwwHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Pizza boy" className='login-image' />
+                <img src="https://img.freepik.com/free-vector/pizza-slice-melted-cartoon-vector-icon-illustration-food-object-icon-concept-isolated-premium_138676-4663.jpg?w=2000" alt="Pizza boy" className='login-image' />
             </div>
         </div>
     )

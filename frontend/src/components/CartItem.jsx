@@ -1,6 +1,6 @@
 import React from 'react'
-// import {BiUpArrow, BiDownArrow} from 'react-icons/bi'
-// import {GiTireIronCross} from 'react-icons/gi'
+import {BiUpArrow, BiDownArrow} from 'react-icons/bi'
+import {GiTireIronCross} from 'react-icons/gi'
 import '../styles/CartItem.css'
 // import {useDispatch} from 'react-redux';
 // import {updateQuantity} from '../redux/cartRedux';
@@ -22,24 +22,28 @@ const CartItem = (props) => {
         </div>
         <div className="cost-info">
             <div className="quantity-control">
-                {/* <div className="quantity-inc" onClick={handleUpdate}>
+                <div className="quantity-inc"
+                //  onClick={handleUpdate}
+                 >
                     <BiUpArrow />
                 </div>
                 <div className="quantity-dec">
-                    <BiDownArrow onClick={() => {
-                        if(props.pizza.quantity > 1){
-                            dispatch(updateQuantity({pizza : props.pizza, inc : false}))
-                        }
-                    }}/>
-                </div> */}
+                    <BiDownArrow 
+                    // onClick={() => {
+                    //     if(props.pizza.quantity > 1){
+                    //         dispatch(updateQuantity({pizza : props.pizza, inc : false}))
+                    //     }
+                    // }}
+                    />
+                </div>
                 <div className="quantity">
                     {props.pizza.quantity}
                 </div>
             </div>
             <div className="cost">₹{props.pizza.price*props.pizza.quantity}</div>
-            {/* <div className="remove-pizza">
+            <div className="remove-pizza">
                 <GiTireIronCross />
-            </div> */}
+            </div>
         </div>
     </div>
   )
