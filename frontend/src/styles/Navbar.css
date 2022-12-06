@@ -40,7 +40,8 @@
     column-gap: 45px;
 }
 
-.navbar-center-side > a{
+.navbar-center-side > a,
+.navbar-center-side > p{
     text-decoration: none;
     font-size: 24px;
     color: white;
@@ -50,8 +51,9 @@
 }
 
 .navbar-center-side > a:hover,
-.navbar-right > a:hover{
-    color: aliceblue;
+.navbar-right > a:hover,
+.navbar-center-side > p:hover{
+    color: salmon;
     transform: scale(1.05);
 }
 .navbar-right{
@@ -107,7 +109,8 @@
         flex-direction: column;
     }
 
-    .navbar-center-side >a{
+    .navbar-center-side >a,
+    .navbar-center-side > p{
         position: relative;
         z-index: 12;
         color: black;

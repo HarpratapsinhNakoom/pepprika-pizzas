@@ -6,9 +6,18 @@ import { AiOutlineShopping } from 'react-icons/ai'
 import { GoogleButton } from 'react-google-button'
 import { UserAuth } from '../context/AuthContext'
 import { useNavigate } from 'react-router-dom'
+import { login } from '../redux/apiCalls'
+import {useDispatch, useSelector} from 'react-redux'
 
 const Login = () => {
+  const navigate = useNavigate();
+
   const [userType, setUserType] = React.useState("customer");
+  
+  const {isFetching, error} = useSelector(state => state.user);
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
+  const dispatch = useDispatch();
 
   const handleUserType = () => {
     if (userType === "customer") {
@@ -16,11 +25,17 @@ const Login = () => {
     } else {
       setUserType("customer");
     }
-
-
   }
+
+  const handleLogin = (e) => {
+      e.preventDefault();
+      login(dispatch, {email, password});
+      if(error) {
+        navigate("/");
+      }
+  }
+
   const { googleSignIn, user } = UserAuth();
-  const navigate = useNavigate();
 
   const handleGoogleSignIn = async () => {
     try {
@@ -60,11 +75,29 @@ const Login = () => {
         </div>
         <div className="input-elements">
           <label htmlFor="email">Email address</label>
-          <input type="email" id="email" name='email' />
+          <input
+              type="email"
+              id="email"
+              name='email'
+              onChange={(e) => {setEmail(e.target.value)}}
+              />
           <label htmlFor="password">Password</label>
-          <input type="password" name="password" id='password' />
+          <input
+              type="password"
+              name="password"
+              id='password'
+              onChange={(e) => {setPassword(e.target.value)}}
+              />
         </div>
-        <button className='submit-btn btn'>Log in</button>
+        <button
+            className='submit-btn btn'
+            onClick={handleLogin}
+            disabled={isFetching}>Log in</button>
+        {error && <p
+                    style={
+                      {color:"salmon",
+                      margin:"40px 0",
+                      fontSize:"25px"}}>Uh oh! Something went wrong</p>}
         <GoogleButton onClick={handleGoogleSignIn} />
 
         <p>Don't have an account? <Link to="/signup">Sign up</Link> </p>
