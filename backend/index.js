@@ -6,6 +6,8 @@ app.use(express.json())
 
 const authRoute = require('./paths/auth')
 const productRoute = require('./paths/products')
+const cartRoute = require('./paths/cart')
+const orderRoute = require('./paths/order')
 
 
 const dotenv = require("dotenv")
@@ -23,6 +25,8 @@ mongoose.connect(
 
 app.use('/api/auth', authRoute);
 app.use('/api/products', productRoute);
+app.use('/api/cart', cartRoute);
+app.use('/api/order', orderRoute);
 
 app.listen(PORT, () => {
     console.log("Server listening on PORT - ",PORT);
