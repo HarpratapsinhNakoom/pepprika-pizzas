@@ -59,3 +59,18 @@
     font-size: 17px;
     color: aliceblue;
 }
+
+@media screen and (max-width : 715px) { 
+    .about-container {
+        padding: 120px 5px;
+    }
+    .imagePart {
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width : 400px) {
+    .imagePart{
+        display: none;
+    }
+}

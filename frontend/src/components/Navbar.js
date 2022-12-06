@@ -1,30 +1,63 @@
 import React from 'react'
 import '../styles/Navbar.css'
-import { BsCart , BsInstagram , BsGithub } from 'react-icons/bs'
-import { CiLinkedin } from 'react-icons/ci'
+import { BsCart } from 'react-icons/bs'
 import { Link } from 'react-router-dom';
+import { UserAuth } from '../context/AuthContext'
+import {useSelector} from 'react-redux'
+import {GoThreeBars} from 'react-icons/go'
+import {GiTireIronCross} from 'react-icons/gi'
 
 function NavbarComponent() {
+    const { user, logOut } = UserAuth();
+    const navRef = React.useRef();
+
+    const handleSignOut = async () => {
+        try {
+            await logOut()
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    const handleToggle = () => {
+        navRef.current.classList.toggle('navbar-responsive');
+    }
+    const quantity = useSelector(state => state.cart.quantity);
+    const loggedUser = useSelector(state => state.user.currentUser);
+    const loggedIn = user || loggedUser;
     return (
         <div className='navbar-container'>
             <div className="navbar-left">
                 <Link to="/" className="navbar-title">𝒫𝑒𝓅𝓅𝓇𝒾𝓀𝒶 𝒫𝒾𝓏𝓏𝒶𝓈</Link>
             </div>
-            <div className="navbar-center">
+            <div className="navbar-center" ref={navRef}>
                 <div className="navbar-center-side">
                     <Link to="/menu">Menu</Link>
                 </div>
-                <div className="navbar-center-side">
-                    <Link to="/login">Log in</Link>
-                    <Link to="/signup">Sign up</Link>
-                    <Link to="/cart" style={{fontSize : "32px"}}><BsCart /></Link>
+                <div className="navbar-center-side navbar-center-side-right">
+                    {loggedIn ? (
+                        <>
+
+                            <Link to="/order-tracking">Your Order</Link>
+                            <p onClick={handleSignOut}>LogOut</p>
+                            {/* <Link to="/cart" style={{ fontSize: "32px" }}><BsCart /> {quantity}</Link> */}
+                        </>
+                    ) : (
+                        <>
+                            <Link to='/login'>Sign In</Link>
+                            <Link to="/signup">Sign up</Link>
+                        </>
+                    )}
+                    <Link to="/cart" style={{ fontSize: "32px" }}><BsCart /> {quantity}</Link>
+                    {/* <Link to="/login">Log in</Link> */}
+                    <GiTireIronCross className='toggleBtn closeBtn' onClick={handleToggle}/>
                 </div>
             </div>
-            {/* <div className="navbar-right">
-                <Link to="/"><BsGithub /></Link>
-                <Link to="/"><CiLinkedin /></Link>
-                <Link to="/"><BsInstagram /></Link>
-            </div> */}
+            
+            <div className="navbar-right">
+                <GoThreeBars className='toggleBtn showBtn' onClick={handleToggle}/>
+            </div>
+            
         </div>
     );
 }

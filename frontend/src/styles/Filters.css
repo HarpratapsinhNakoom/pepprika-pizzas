@@ -3,10 +3,14 @@
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-evenly;
+    row-gap: 25px;
+    column-gap: 12px;
     border-bottom: 3px solid rgba(160, 160, 160, 0.596);
 }
 .filter-box {
+    min-width: 100px;
     cursor: pointer;
+    text-decoration: none;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,8 +27,16 @@
     width: 100%;
 }
 .filter-name {
+    color: #252525;
     font-size:15px;
     margin-top: 12px;
     font-weight: 500;
     transition: all 0.3s ease;
+}
+
+
+@media screen and (width <= 850px){
+    .filters-container {
+        margin-top: 150px;
+    }
 }

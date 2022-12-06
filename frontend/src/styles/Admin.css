@@ -1,0 +1,18 @@
+/* body{
+    background-color: black; */
+/* } */
+table{
+    background-color: rgb(238, 182, 78);
+    margin: 0;
+    /* color: gray; */
+    font-family: fantasy;
+    font-style: italic;
+
+    
+}
+tr{
+    margin: 10px;
+}
+tc{
+    margin: 10px;
+}

@@ -73,7 +73,7 @@ p{
     letter-spacing: 1px;
     font-size: 18px;
 }
-
+ 
 #email,
 #password{
     width: 100%;
@@ -122,4 +122,8 @@ p{
 }
 .login-box > p > a:hover {
     text-decoration: none;
+}
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
