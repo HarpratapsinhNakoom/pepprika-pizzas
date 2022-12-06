@@ -3,17 +3,21 @@ import '../styles/Navbar.css'
 import { BsCart } from 'react-icons/bs'
 import { Link } from 'react-router-dom';
 import { UserAuth } from '../context/AuthContext'
-import {useSelector} from 'react-redux'
+import {useSelector, useDispatch} from 'react-redux'
 import {GoThreeBars} from 'react-icons/go'
 import {GiTireIronCross} from 'react-icons/gi'
+import { logoutUser } from '../redux/userRedux';
 
 function NavbarComponent() {
     const { user, logOut } = UserAuth();
     const navRef = React.useRef();
 
+    const dispatch = useDispatch();
+
     const handleSignOut = async () => {
         try {
             await logOut()
+            dispatch(logoutUser());
         } catch (error) {
             console.log(error);
         }

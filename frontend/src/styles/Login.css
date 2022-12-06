@@ -12,9 +12,9 @@ p{
     padding: 0;
     margin: 0;
 }
-.login-image-container {
+/* .login-image-container {
     flex: 1;
-}
+} */
 .login-image {
     /* width: 100%; */
     height: 100%;
@@ -22,7 +22,6 @@ p{
 
 .login-box {
     color: aliceblue;
-    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
