@@ -106,3 +106,9 @@
         gap: 32px;
     }
 }
+
+@media screen and (width <= 400px) {
+    .cost-info {
+        gap: 20px;
+    }
+}
