@@ -48,7 +48,7 @@ function NavbarComponent() {
                         </>
                     ) : (
                         <>
-                            <Link to='/login'>Sign In</Link>
+                            <Link to='/login'>Log In</Link>
                             <Link to="/signup">Sign up</Link>
                         </>
                     )}

@@ -8,11 +8,13 @@ import {useSelector} from 'react-redux'
 import StripeCheckout from 'react-stripe-checkout'
 import { userRequest } from '../requestMethods'
 import {useNavigate, useNavigation} from 'react-router'
+import { Link } from 'react-router-dom'
 
 function Cart() {
     const KEY = process.env.REACT_APP_STRIPE;
     console.log(KEY)
     const cart = useSelector(state => state.cart);
+    const user = useSelector(state => state.user.currentUser);
 
     const navigate = useNavigate();
     
@@ -70,7 +72,7 @@ function Cart() {
                 </div> */}
                 <div className="address-container">
                     {/* <input type="text" className='address' placeholder='Your address' /> */}
-                    <StripeCheckout
+                    {user && <StripeCheckout
                         name='Pepprika Pizzas'
                         billingAddress
                         shippingAddress
@@ -81,7 +83,12 @@ function Cart() {
                         <button className='checkout_btn'>
                             Place order <TfiHandPointRight />
                         </button>
-                    </StripeCheckout>
+                    </StripeCheckout>}
+                    {
+                        !user && <div className="login-message">
+                            <Link to="/login">Log in</Link> to place your order
+                        </div>
+                    }
                 </div>
             {/* <Footer /> */}
         </div>

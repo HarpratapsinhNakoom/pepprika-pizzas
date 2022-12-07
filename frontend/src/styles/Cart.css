@@ -99,6 +99,20 @@
     opacity: 0.8;
 }
 
+.login-message {
+    text-align: center;
+    font-size: 38px;
+}
+
+.login-message > a{
+    color: salmon;
+    text-decoration: none;
+}
+
+.login-message > a:hover{
+    text-decoration: underline;
+}
+
 @media screen and (max-width : 850px) { 
     #cart {
         margin-top: 180px;
