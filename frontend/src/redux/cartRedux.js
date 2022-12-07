@@ -1,4 +1,4 @@
-import {createSlice} from '@reduxjs/toolkit'
+import {createSlice, current} from '@reduxjs/toolkit'
 
 const cartSlice = createSlice({
     name: "cart",
@@ -23,8 +23,19 @@ const cartSlice = createSlice({
         //     //     // state.pizzaList[state.pizzaList.indexOf(action.payload.pizza)].quantity -= 1;
         //     // }
         // }
+        removeItem : (state, action) => {
+            console.log(current(state))
+            state.pizzaList = state.pizzaList.filter((curr) => {
+                return curr.title !== action.payload.title;
+            });
+            console.log(current(state))
+
+            console.log(action.payload)
+            state.quantity -= 1;
+            state.totalPrice -= action.payload.price*action.payload.quantity;
+        }
     }
 })
 
-export const {addToCart, updateQuantity} = cartSlice.actions;
+export const {addToCart, removeItem} = cartSlice.actions;
 export default cartSlice.reducer;

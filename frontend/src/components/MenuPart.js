@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import '../styles/MenuPart.css'
 
 const MenuPart = () => {
@@ -29,8 +30,8 @@ const MenuPart = () => {
                 </div>
             </div>
             <div className="button-container">
-                <button id='btn'><strong>ORDER ONLINE NOW</strong></button>
-                <button id='btn'><strong>SEE OUR MENU</strong></button>
+                <Link to="/menu" id='btn'><strong>ORDER ONLINE NOW</strong></Link>
+                <Link to="/menu" id='btn'><strong>SEE OUR MENU</strong></Link>
             </div>
         </div>
         <div className="img-part">

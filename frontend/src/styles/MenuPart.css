@@ -3,7 +3,7 @@
   column-gap: 15px;
   row-gap: 15px;
   margin: 10px;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   /* flex-direction: column; */
 }
 
@@ -45,10 +45,10 @@
 }
 
 .img-part > img {
-  border-radius: inherit;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  border-radius: inherit;
+  object-fit: cover;
 }
 
 .button-container {
@@ -67,9 +67,11 @@
   outline: none;
   font-size: 22px;
   border: none;
+  text-decoration: none;
+  text-align: center;
 }
 
-@media screen and (max-width : 750px) { 
+@media screen and (max-width : 950px) { 
     .menupart-container {
       flex-direction: column;
     }
