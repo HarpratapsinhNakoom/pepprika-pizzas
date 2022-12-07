@@ -2,11 +2,11 @@ import React from 'react'
 import {BiUpArrow, BiDownArrow} from 'react-icons/bi'
 import {GiTireIronCross} from 'react-icons/gi'
 import '../styles/CartItem.css'
-// import {useDispatch} from 'react-redux';
-// import {updateQuantity} from '../redux/cartRedux';
+import {useDispatch} from 'react-redux';
+import { removeItem} from '../redux/cartRedux';
 
 const CartItem = (props) => {
-    // const dispatch = useDispatch();
+    const dispatch = useDispatch();
 
     // const handleUpdate = () => {
     //     dispatch(updateQuantity());
@@ -42,7 +42,7 @@ const CartItem = (props) => {
             </div>
             <div className="cost">₹{props.pizza.price*props.pizza.quantity}</div>
             <div className="remove-pizza">
-                <GiTireIronCross />
+                <GiTireIronCross onClick={() => {dispatch(removeItem({...props.pizza}))}}/>
             </div>
         </div>
     </div>
