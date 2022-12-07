@@ -4,12 +4,20 @@ import {BiUpArrow, BiDownArrow} from 'react-icons/bi'
 import {useDispatch} from 'react-redux'
 import { addToCart } from '../redux/cartRedux'
 import { useNavigate } from 'react-router'
+import toast from 'react-hot-toast'
 
 const PizzaItem = (props) => {
   const dispatch = useDispatch();
   const [quantity, setQuantity] = React.useState(1);
   const handleCart = () => {
       dispatch(addToCart({...props.pizza, quantity}));
+      toast.success('Added to cart',
+        {
+          style : {
+            color : 'salmon'
+          }
+        }
+      );
   }
   // console.log(props.pizza)
   const navigate = useNavigate();
@@ -17,11 +25,11 @@ const PizzaItem = (props) => {
     navigate(`/pizza/${props.pizza.title.toLowerCase()}`, {state:{...props.pizza}})
   }
   return (
-    <div className='pizzaItem-container' onClick={handlePizzaClick}>
-        <img src={props.pizza.image} alt="Pizza" />
-        <h3>{props.pizza.title}</h3>
-        <p>{props.pizza.desc}</p>
-        <h3>₹{props.pizza.price}</h3>
+    <div className='pizzaItem-container'>
+        <img src={props.pizza.image} alt="Pizza" onClick={handlePizzaClick}/>
+        <h3  onClick={handlePizzaClick}>{props.pizza.title}</h3>
+        <p  onClick={handlePizzaClick}>{props.pizza.desc}</p>
+        <h3  onClick={handlePizzaClick}>₹{props.pizza.price}</h3>
         <button>
             <p onClick={handleCart}>Add to cart</p>
             <div className="quantity">
