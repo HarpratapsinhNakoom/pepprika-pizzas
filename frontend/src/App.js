@@ -10,6 +10,7 @@ import Single from './pages/Single';
 import { AuthContextProvider } from './context/AuthContext';
 import Admin from './pages/Admin';
 import { useSelector } from 'react-redux';
+import {Toaster} from 'react-hot-toast'
 
 const App = () => {
   const user = useSelector(state => state.user.currentUser);
@@ -17,6 +18,7 @@ const App = () => {
   return (
     <>
       <AuthContextProvider>
+        <Toaster position='top-right'/>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />

@@ -5,6 +5,7 @@ import {useDispatch} from 'react-redux'
 import { addToCart } from '../redux/cartRedux'
 import Header from '../components/Header';
 import { useLocation } from 'react-router';
+import toast from 'react-hot-toast';
 
 
 export default function Single() {
@@ -16,6 +17,13 @@ export default function Single() {
 
     const handleCart = () => {
         dispatch(addToCart({ ...pizzaInfo, quantity}));
+        toast.success('Added to cart',
+        {
+          style : {
+            color : 'salmon'
+          }
+        }
+      );
     }
     return (
         <>

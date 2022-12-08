@@ -6,6 +6,7 @@
     border-bottom: 1px dotted salmon;
     /* flex-wrap: wrap; */
     margin-bottom: 40px;
+    row-gap: 40px;
 }
 
 .cart-pizza {
@@ -35,7 +36,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* width: 100%; */
+    width: 100%;
     gap: 100px;
 }
 .quantity-control{
@@ -76,7 +77,12 @@
 .remove-pizza:hover {
     opacity: 0.5;
 }
-
+/* 
+@media screen and (width <= 1100px){
+    .cost-info {
+        flex-direction: column;
+    }
+} */
 @media screen and (max-width : 960px){
     .cart-pizza {
         gap: 20px;
@@ -87,7 +93,7 @@
     }
 }
 
-@media screen and (max-width : 870px){
+@media screen and (max-width : 1100px){
     .cart-item {
         flex-direction: column;
     }
@@ -95,5 +101,14 @@
 @media screen and (max-width : 700px){
     .cart-pizza {
         flex-direction: column;
+    }
+    .cost-info {
+        gap: 32px;
+    }
+}
+
+@media screen and (width <= 400px) {
+    .cost-info {
+        gap: 20px;
     }
 }
