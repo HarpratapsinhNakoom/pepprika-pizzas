@@ -45,8 +45,6 @@ const SignUp = () => {
                     <input type="email" id="email" name='email' />
                     <label htmlFor="password">Password</label>
                     <input type="password" name="password" id='password' />
-                    <label htmlFor="password">Confirm Password</label>
-                    <input type="password" name="confirm_password" id='confirm_password' />
                 </div>
                 <button className='submit-btn btn'>Sign Up</button>
                 <p>Already have an account? <Link to="/login">Login</Link> </p>
